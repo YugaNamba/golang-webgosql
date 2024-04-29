@@ -51,27 +51,29 @@ func login(w http.ResponseWriter, r *http.Request) {
 }
 
 func authenticate(w http.ResponseWriter, r *http.Request) {
-	user, err := models.GetUserByEmail(r.PostFormValue("email"))
-	if err != nil {
-		log.Println(err)
-		http.Redirect(w, r, "/login", 401)
-	}
-	if user.Password == models.Encrypt(r.PostFormValue("password")) {
-		session, err := user.CreateSession()
+	if r.Method == "POST" {
+		user, err := models.GetUserByEmail(r.PostFormValue("email"))
 		if err != nil {
 			log.Println(err)
-			http.Error(w, "Cannot create session", http.StatusInternalServerError)
+			http.Redirect(w, r, "/login", 401)
 		}
-		cookie := http.Cookie{
-			Name: "_cookie",
-			Value: session.UUID,
-			HttpOnly: true,
+		if user.Password == models.Encrypt(r.PostFormValue("password")) {
+			session, err := user.CreateSession()
+			if err != nil {
+				log.Println(err)
+				http.Error(w, "Cannot create session", http.StatusInternalServerError)
+			}
+			cookie := http.Cookie{
+				Name: "_cookie",
+				Value: session.UUID,
+				HttpOnly: true,
+			}
+			http.SetCookie(w, &cookie)
+			http.Redirect(w, r, "/", 302)
+		} else {
+			http.Redirect(w, r, "/login", 401)
 		}
-		http.SetCookie(w, &cookie)
-		http.Redirect(w, r, "/", 302)
-	} else {
-		http.Redirect(w, r, "/login", 401)
-	}	
+	}
 }
 
 func logout(w http.ResponseWriter, r *http.Request) {
