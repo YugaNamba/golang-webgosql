@@ -10,18 +10,18 @@ func top(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		generateHTML(w, nil, "layout", "public_navbar", "top")
 	} else {
-		http.Redirect(w, r, "/todos", 302)
+		http.Redirect(w, r, "/todos", int(Found))
 	}
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
 	sess, err := session(w, r)
 	if err != nil {
-		http.Redirect(w, r, "/login", 302)
+		http.Redirect(w, r, "/login", int(Found))
 	} else {
 		user, err := sess.GetUserBySession()
 		if err != nil {
-			http.Redirect(w, r, "/login", 302)
+			http.Redirect(w, r, "/login", int(Found))
 		}
 		todos, err := user.GetTodosByUser()
 		if err != nil {
@@ -36,7 +36,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 func todoNew(w http.ResponseWriter, r *http.Request) {
 	sess, err := session(w, r)
 	if err != nil {
-		http.Redirect(w, r, "/login", 302)
+		http.Redirect(w, r, "/login", int(Found))
 	} else {
 		generateHTML(w, sess, "layout", "private_navbar", "todo_new")
 	}
@@ -46,11 +46,11 @@ func todoSave(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" {
 		sess, err := session(w, r)
 		if err != nil {
-			http.Redirect(w, r, "/login", 302)
+			http.Redirect(w, r, "/login", int(Found))
 		} else {
 			user, err := sess.GetUserBySession()
 			if err != nil {
-				http.Redirect(w, r, "/login", 302)
+				http.Redirect(w, r, "/login", int(Found))
 			}
 			if err := r.ParseForm(); err != nil {
 				http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -61,7 +61,7 @@ func todoSave(w http.ResponseWriter, r *http.Request) {
 				http.Error(w, err.Error(), http.StatusInternalServerError)
 				return
 			}
-			http.Redirect(w, r, "/todos", 302)
+			http.Redirect(w, r, "/todos", int(Found))
 		}
 	}
 }
@@ -69,11 +69,11 @@ func todoSave(w http.ResponseWriter, r *http.Request) {
 func todoEdit(w http.ResponseWriter, r *http.Request, id int) {
 	sess, err := session(w, r)
 	if err != nil {
-		http.Redirect(w, r, "/login", 302)
+		http.Redirect(w, r, "/login", int(Found))
 	} else {
 		_, err := sess.GetUserBySession()
 		if err != nil {
-			http.Redirect(w, r, "/login", 302)
+			http.Redirect(w, r, "/login", int(Found))
 		}
 		todo, err := models.GetTodo(id)
 		if err != nil {
@@ -87,11 +87,11 @@ func todoEdit(w http.ResponseWriter, r *http.Request, id int) {
 func todoUpdate(w http.ResponseWriter, r *http.Request, id int) {
 	sess, err := session(w, r)
 	if err != nil {
-		http.Redirect(w, r, "/login", 302)
+		http.Redirect(w, r, "/login", int(Found))
 	} else {
 		_, err := sess.GetUserBySession()
 		if err != nil {
-			http.Redirect(w, r, "/login", 302)
+			http.Redirect(w, r, "/login", int(Found))
 		}
 		if r.Method == "POST" {
 			if err := r.ParseForm(); err != nil {
@@ -109,7 +109,7 @@ func todoUpdate(w http.ResponseWriter, r *http.Request, id int) {
 				http.Error(w, err.Error(), http.StatusInternalServerError)
 				return
 			}
-			http.Redirect(w, r, "/todos", 302)
+			http.Redirect(w, r, "/todos", int(Found))
 		}
 	}
 }
@@ -117,11 +117,11 @@ func todoUpdate(w http.ResponseWriter, r *http.Request, id int) {
 func todoDelete(w http.ResponseWriter, r *http.Request, id int) {
 	sess, err := session(w, r)
 	if err != nil {
-		http.Redirect(w, r, "/login", 302)
+		http.Redirect(w, r, "/login", int(Found))
 	} else {
 		_, err := sess.GetUserBySession()
 		if err != nil {
-			http.Redirect(w, r, "/login", 302)
+			http.Redirect(w, r, "/login", int(Found))
 		}
 		todo, err := models.GetTodo(id)
 		if err != nil {
@@ -132,6 +132,6 @@ func todoDelete(w http.ResponseWriter, r *http.Request, id int) {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-		http.Redirect(w, r, "/todos", 302)
+		http.Redirect(w, r, "/todos", int(Found))
 	}
 }
