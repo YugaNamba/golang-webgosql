@@ -10,7 +10,7 @@ import (
 	"todo_app/config"
 )
 
-func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) {
+func generateHTML(w http.ResponseWriter, data any, filenames ...string) {
 	var files []string
 	for _, file := range filenames {
 		files = append(files, fmt.Sprintf("app/views/templates/%s.html", file))
