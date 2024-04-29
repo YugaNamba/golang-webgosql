@@ -1,3 +1,949 @@
 2024/04/26 12:31:03 main.go:16: test
 2024/04/26 12:32:53 main.go:16: test
 2024/04/28 08:40:32 base.go:21: sql: unknown driver "sqlite3" (forgotten import?)
+2024/04/29 10:29:12 server.go:3413: http: panic serving 127.0.0.1:56815: open app/views/templates/signup.html: no such file or directory
+goroutine 9 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10d4e2da0?, 0xc000202360?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x10d534e28, 0xc000234000}, {0x0, 0x0}, {0xc0000e1ab8?, 0xc0000dc200?, 0xc0000e1aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.Signup({0x10d534e28?, 0xc000234000?}, 0xc0000e1b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x10d794120?, {0x10d534e28?, 0xc000234000?}, 0x10d235ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10cff9c99?, {0x10d534e28, 0xc000234000}, 0xc000212000)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000202030?}, {0x10d534e28?, 0xc000234000?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000fc090, {0x10d535508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:29:13 server.go:3413: http: panic serving 127.0.0.1:56816: open app/views/templates/signup.html: no such file or directory
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10d4e2da0?, 0xc000202660?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x10d534e28, 0xc0002341c0}, {0x0, 0x0}, {0xc000124ab8?, 0xc000116000?, 0xc000124aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.Signup({0x10d534e28?, 0xc0002341c0?}, 0xc000124b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x10d794120?, {0x10d534e28?, 0xc0002341c0?}, 0x10d235ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10cff9c99?, {0x10d534e28, 0xc0002341c0}, 0xc000132000)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000118090?}, {0x10d534e28?, 0xc0002341c0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00011c000, {0x10d535508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:29:13 server.go:3413: http: panic serving 127.0.0.1:56822: open app/views/templates/signup.html: no such file or directory
+goroutine 10 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10d4e2da0?, 0xc000202990?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x10d534e28, 0xc000234380}, {0x0, 0x0}, {0xc00008dab8?, 0xc0000dc280?, 0xc00008daa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.Signup({0x10d534e28?, 0xc000234380?}, 0xc00008db30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x10d794120?, {0x10d534e28?, 0xc000234380?}, 0x10d235ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10cff9c99?, {0x10d534e28, 0xc000234380}, 0xc0000d0900)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000b5500?}, {0x10d534e28?, 0xc000234380?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000fc120, {0x10d535508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:29:13 server.go:3413: http: panic serving 127.0.0.1:56824: open app/views/templates/signup.html: no such file or directory
+goroutine 37 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10d4e2da0?, 0xc000202d20?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x10d534e28, 0xc000234540}, {0x0, 0x0}, {0xc00008dab8?, 0xc00025e200?, 0xc00008daa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.Signup({0x10d534e28?, 0xc000234540?}, 0xc00008db30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x10d794120?, {0x10d534e28?, 0xc000234540?}, 0x10d235ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10cff9c99?, {0x10d534e28, 0xc000234540}, 0xc000212a20)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000202a50?}, {0x10d534e28?, 0xc000234540?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000216360, {0x10d535508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:29:18 server.go:3413: http: panic serving 127.0.0.1:56847: open app/views/templates/signup.html: no such file or directory
+goroutine 50 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10d4e2da0?, 0xc000203050?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x10d534e28, 0xc000234700}, {0x0, 0x0}, {0xc00008dab8?, 0xc0002a2000?, 0xc00008daa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.Signup({0x10d534e28?, 0xc000234700?}, 0xc00008db30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x10d794120?, {0x10d534e28?, 0xc000234700?}, 0x10d235ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10cff9c99?, {0x10d534e28, 0xc000234700}, 0xc000212d80)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000202d80?}, {0x10d534e28?, 0xc000234700?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0002a8000, {0x10d535508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:29:48 server.go:3413: http: panic serving 127.0.0.1:56995: open app/views/templates/signup.html: no such file or directory
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x102be0da0?, 0xc0000aa360?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x102c32e28, 0xc0000c2000}, {0x0, 0x0}, {0xc0001d9ab8?, 0xc0001d4200?, 0xc0001d9aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.Signup({0x102c32e28?, 0xc0000c2000?}, 0xc0001d9b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x102e92120?, {0x102c32e28?, 0xc0000c2000?}, 0x102933ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x1026f7c99?, {0x102c32e28, 0xc0000c2000}, 0xc0000b0000)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000aa030?}, {0x102c32e28?, 0xc0000c2000?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001f8090, {0x102c33508, 0xc0001993b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:29:56 server.go:3413: http: panic serving 127.0.0.1:57036: open app/views/templates/signup.html: no such file or directory
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x105a64da0?, 0xc00020a360?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x105ab6e28, 0xc000238000}, {0x0, 0x0}, {0xc000181ab8?, 0xc0000fa200?, 0xc000181aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x105ab6e28?, 0xc000238000?}, 0xc000181b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x105d16120?, {0x105ab6e28?, 0xc000238000?}, 0x1057b7ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10557bc99?, {0x105ab6e28, 0xc000238000}, 0xc000216000)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00020a030?}, {0x105ab6e28?, 0xc000238000?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001a0090, {0x105ab7508, 0xc0000bf3b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:29:59 server.go:3413: http: panic serving 127.0.0.1:57037: open app/views/templates/signup.html: no such file or directory
+goroutine 23 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x105a64da0?, 0xc0001102a0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x105ab6e28, 0xc000118000}, {0x0, 0x0}, {0xc000088ab8?, 0xc0000fa280?, 0xc000088aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x105ab6e28?, 0xc000118000?}, 0xc000088b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x105d16120?, {0x105ab6e28?, 0xc000118000?}, 0x1057b7ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10557bc99?, {0x105ab6e28, 0xc000118000}, 0xc0000ee900)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000bf500?}, {0x105ab6e28?, 0xc000118000?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001a0120, {0x105ab7508, 0xc0000bf3b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:29:59 server.go:3413: http: panic serving 127.0.0.1:57051: open app/views/templates/signup.html: no such file or directory
+goroutine 35 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x105a64da0?, 0xc0000bf800?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x105ab6e28, 0xc0001ba2a0}, {0x0, 0x0}, {0xc000204ab8?, 0xc000264080?, 0xc000204aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x105ab6e28?, 0xc0001ba2a0?}, 0xc000204b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x105d16120?, {0x105ab6e28?, 0xc0001ba2a0?}, 0x1057b7ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10557bc99?, {0x105ab6e28, 0xc0001ba2a0}, 0xc000216480)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00020a420?}, {0x105ab6e28?, 0xc0001ba2a0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00021a120, {0x105ab7508, 0xc0000bf3b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:29:59 server.go:3413: http: panic serving 127.0.0.1:57053: open app/views/templates/signup.html: no such file or directory
+goroutine 25 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x105a64da0?, 0xc0000bfb90?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x105ab6e28, 0xc0001ba460}, {0x0, 0x0}, {0xc000204ab8?, 0xc0000fa300?, 0xc000204aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x105ab6e28?, 0xc0001ba460?}, 0xc000204b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x105d16120?, {0x105ab6e28?, 0xc0001ba460?}, 0x1057b7ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10557bc99?, {0x105ab6e28, 0xc0001ba460}, 0xc0000eec60)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000bf8c0?}, {0x105ab6e28?, 0xc0001ba460?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001a02d0, {0x105ab7508, 0xc0000bf3b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:30:01 server.go:3413: http: panic serving 127.0.0.1:57064: open app/views/templates/signup.html: no such file or directory
+goroutine 27 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x105a64da0?, 0xc000110630?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x105ab6e28, 0xc0001181c0}, {0x0, 0x0}, {0xc000204ab8?, 0xc0000fa380?, 0xc000204aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x105ab6e28?, 0xc0001181c0?}, 0xc000204b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x105d16120?, {0x105ab6e28?, 0xc0001181c0?}, 0x1057b7ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10557bc99?, {0x105ab6e28, 0xc0001181c0}, 0xc0000eefc0)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000bfc50?}, {0x105ab6e28?, 0xc0001181c0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001a0480, {0x105ab7508, 0xc0000bf3b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:30:01 server.go:3413: http: panic serving 127.0.0.1:57065: open app/views/templates/signup.html: no such file or directory
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x105a64da0?, 0xc000110930?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x105ab6e28, 0xc000118380}, {0x0, 0x0}, {0xc000088ab8?, 0xc000144000?, 0xc000088aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x105ab6e28?, 0xc000118380?}, 0xc000088b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x105d16120?, {0x105ab6e28?, 0xc000118380?}, 0x1057b7ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10557bc99?, {0x105ab6e28, 0xc000118380}, 0xc000124360)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000110360?}, {0x105ab6e28?, 0xc000118380?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00010c120, {0x105ab7508, 0xc0000bf3b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:30:01 server.go:3413: http: panic serving 127.0.0.1:57067: open app/views/templates/signup.html: no such file or directory
+goroutine 28 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x105a64da0?, 0xc000110c60?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x105ab6e28, 0xc000118540}, {0x0, 0x0}, {0xc000089ab8?, 0xc0000fa400?, 0xc000089aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x105ab6e28?, 0xc000118540?}, 0xc000089b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x105d16120?, {0x105ab6e28?, 0xc000118540?}, 0x1057b7ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10557bc99?, {0x105ab6e28, 0xc000118540}, 0xc0000ef0e0)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000bfd10?}, {0x105ab6e28?, 0xc000118540?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001a0510, {0x105ab7508, 0xc0000bf3b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:30:01 server.go:3413: http: panic serving 127.0.0.1:57069: open app/views/templates/signup.html: no such file or directory
+goroutine 10 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x105a64da0?, 0xc000110ff0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x105ab6e28, 0xc000118700}, {0x0, 0x0}, {0xc000089ab8?, 0xc000144200?, 0xc000089aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x105ab6e28?, 0xc000118700?}, 0xc000089b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x105d16120?, {0x105ab6e28?, 0xc000118700?}, 0x1057b7ffa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10557bc99?, {0x105ab6e28, 0xc000118700}, 0xc000124b40)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000110d20?}, {0x105ab6e28?, 0xc000118700?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00010c510, {0x105ab7508, 0xc0000bf3b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:31:01 server.go:3413: http: panic serving 127.0.0.1:57340: open app/views/templates/signup.html: no such file or directory
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10d21bda0?, 0xc00011f860?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x10d26de28, 0xc00019a2a0}, {0x0, 0x0}, {0xc000167ab8?, 0xc00015a200?, 0xc000167aa0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x10d26de28?, 0xc00019a2a0?}, 0xc000167b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x65
+net/http.HandlerFunc.ServeHTTP(0x10d4cd120?, {0x10d26de28?, 0xc00019a2a0?}, 0x10cf6effa?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10cd32c99?, {0x10d26de28, 0xc00019a2a0}, 0xc00014ea20)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000ac030?}, {0x10d26de28?, 0xc00019a2a0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000180090, {0x10d26e508, 0xc00011f3b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:32:10 server.go:3413: http: panic serving 127.0.0.1:57623: open app/views/templates/signup.html: no such file or directory
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x103a47da0?, 0xc00010ac60?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x103a99e28, 0xc000122380}, {0x0, 0x0}, {0xc0001d9aa8?, 0x0?, 0x1035ca3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x103a99e28?, 0xc000122380?}, 0xc0001d9b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x103cf9120?, {0x103a99e28?, 0xc000122380?}, 0x10379af9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10355ec39?, {0x103a99e28, 0xc000122380}, 0xc000112fc0)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00010a030?}, {0x103a99e28?, 0xc000122380?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001f8090, {0x103a9a508, 0xc0001993b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:32:10 server.go:3413: http: panic serving 127.0.0.1:57624: open app/views/templates/signup.html: no such file or directory
+goroutine 23 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x103a47da0?, 0xc00028c360?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x103a99e28, 0xc000122540}, {0x0, 0x0}, {0xc0001dbaa8?, 0x0?, 0x1035ca3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x103a99e28?, 0xc000122540?}, 0xc0001dbb30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x103cf9120?, {0x103a99e28?, 0xc000122540?}, 0x10379af9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10355ec39?, {0x103a99e28, 0xc000122540}, 0xc000113560)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000199500?}, {0x103a99e28?, 0xc000122540?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001f8120, {0x103a9a508, 0xc0001993b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:32:10 server.go:3413: http: panic serving 127.0.0.1:57642: open app/views/templates/signup.html: no such file or directory
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x103a47da0?, 0xc00028c840?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x103a99e28, 0xc0002bc0e0}, {0x0, 0x0}, {0xc0002d6aa8?, 0x0?, 0x1035ca3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x103a99e28?, 0xc0002bc0e0?}, 0xc0002d6b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x103cf9120?, {0x103a99e28?, 0xc0002bc0e0?}, 0x10379af9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10355ec39?, {0x103a99e28, 0xc0002bc0e0}, 0xc000292480)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00028c420?}, {0x103a99e28?, 0xc0002bc0e0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0002c8000, {0x103a9a508, 0xc0001993b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:32:11 server.go:3413: http: panic serving 127.0.0.1:57648: open app/views/templates/signup.html: no such file or directory
+goroutine 36 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x103a47da0?, 0xc00028cd20?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x103a99e28, 0xc0002bc2a0}, {0x0, 0x0}, {0xc0002d6aa8?, 0x0?, 0x1035ca3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x103a99e28?, 0xc0002bc2a0?}, 0xc0002d6b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x103cf9120?, {0x103a99e28?, 0xc0002bc2a0?}, 0x10379af9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10355ec39?, {0x103a99e28, 0xc0002bc2a0}, 0xc000292a20)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00028c900?}, {0x103a99e28?, 0xc0002bc2a0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0002c81b0, {0x103a9a508, 0xc0001993b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:32:16 server.go:3413: http: panic serving 127.0.0.1:57650: open app/views/templates/signup.html: no such file or directory
+goroutine 24 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x103a47da0?, 0xc00028d170?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x103a99e28, 0xc0002bc460}, {0x0, 0x0}, {0xc000089aa8?, 0x0?, 0x1035ca3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x103a99e28?, 0xc0002bc460?}, 0xc000089b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x103cf9120?, {0x103a99e28?, 0xc0002bc460?}, 0x10379af9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10355ec39?, {0x103a99e28, 0xc0002bc460}, 0xc0001c8a20)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0001995f0?}, {0x103a99e28?, 0xc0002bc460?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001f81b0, {0x103a9a508, 0xc0001993b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:32:16 server.go:3413: http: panic serving 127.0.0.1:57672: open app/views/templates/signup.html: no such file or directory
+goroutine 10 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x103a47da0?, 0xc00028d5f0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x103a99e28, 0xc0002bc620}, {0x0, 0x0}, {0xc000088aa8?, 0x0?, 0x1035ca3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x103a99e28?, 0xc0002bc620?}, 0xc000088b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x103cf9120?, {0x103a99e28?, 0xc0002bc620?}, 0x10379af9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10355ec39?, {0x103a99e28, 0xc0002bc620}, 0xc000113680)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00010ad80?}, {0x103a99e28?, 0xc0002bc620?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000114510, {0x103a9a508, 0xc0001993b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:32:16 server.go:3413: http: panic serving 127.0.0.1:57674: open app/views/templates/signup.html: no such file or directory
+goroutine 40 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x103a47da0?, 0xc00028dad0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x103a99e28, 0xc0002bc7e0}, {0x0, 0x0}, {0xc000088aa8?, 0x0?, 0x1035ca3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x103a99e28?, 0xc0002bc7e0?}, 0xc000088b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x103cf9120?, {0x103a99e28?, 0xc0002bc7e0?}, 0x10379af9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10355ec39?, {0x103a99e28, 0xc0002bc7e0}, 0xc0002938c0)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00028d6b0?}, {0x103a99e28?, 0xc0002bc7e0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0002c85a0, {0x103a9a508, 0xc0001993b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:32:46 server.go:3413: http: panic serving 127.0.0.1:57798: open app/views/templates/signup.html: no such file or directory
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10c822da0?, 0xc00020e4b0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x10c874e28, 0xc000238000}, {0x0, 0x0}, {0xc0001d9aa8?, 0x0?, 0x10c3a53a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x10c874e28?, 0xc000238000?}, 0xc0001d9b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x10cad4120?, {0x10c874e28?, 0xc000238000?}, 0x10c575f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10c339c39?, {0x10c874e28, 0xc000238000}, 0xc000218000)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00020e030?}, {0x10c874e28?, 0xc000238000?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001f4120, {0x10c875508, 0xc0001993b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:33:46 server.go:3413: http: panic serving 127.0.0.1:58055: open app/views/templates/signup.html: no such file or directory
+goroutine 9 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10891fda0?, 0xc0002024b0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x108971e28, 0xc000230000}, {0x0, 0x0}, {0xc0000e1aa8?, 0x0?, 0x1084a23a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x108971e28?, 0xc000230000?}, 0xc0000e1b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x108bd1120?, {0x108971e28?, 0xc000230000?}, 0x108672f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x108436c39?, {0x108971e28, 0xc000230000}, 0xc00020e000)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000202030?}, {0x108971e28?, 0xc000230000?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000fc090, {0x108972508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:33:52 server.go:3413: http: panic serving 127.0.0.1:58056: open app/views/templates/signup.html: no such file or directory
+goroutine 10 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10891fda0?, 0xc00011a3f0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x108971e28, 0xc000132000}, {0x0, 0x0}, {0xc00008daa8?, 0x0?, 0x1084a23a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x108971e28?, 0xc000132000?}, 0xc00008db30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x108bd1120?, {0x108971e28?, 0xc000132000?}, 0x108672f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x108436c39?, {0x108971e28, 0xc000132000}, 0xc0000d0900)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000b5500?}, {0x108971e28?, 0xc000132000?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000fc120, {0x108972508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:33:52 server.go:3413: http: panic serving 127.0.0.1:58083: open app/views/templates/signup.html: no such file or directory
+goroutine 11 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10891fda0?, 0xc0000b5a40?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x108971e28, 0xc0001962a0}, {0x0, 0x0}, {0xc00008eaa8?, 0x0?, 0x1084a23a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x108971e28?, 0xc0001962a0?}, 0xc00008eb30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x108bd1120?, {0x108971e28?, 0xc0001962a0?}, 0x108672f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x108436c39?, {0x108971e28, 0xc0001962a0}, 0xc0000d0a20)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000b55f0?}, {0x108971e28?, 0xc0001962a0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000fc1b0, {0x108972508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:05 server.go:3413: http: panic serving 127.0.0.1:58124: open app/views/templates/signup.html: no such file or directory
+goroutine 13 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10891fda0?, 0xc0001bc060?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x108971e28, 0xc000196620}, {0x0, 0x0}, {0xc0000e1aa8?, 0x0?, 0x1084a23a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x108971e28?, 0xc000196620?}, 0xc0000e1b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x108bd1120?, {0x108971e28?, 0xc000196620?}, 0x108672f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x108436c39?, {0x108971e28, 0xc000196620}, 0xc0000d1440)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000b5b00?}, {0x108971e28?, 0xc000196620?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000fc360, {0x108972508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:05 server.go:3413: http: panic serving 127.0.0.1:58125: open app/views/templates/signup.html: no such file or directory
+goroutine 19 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10891fda0?, 0xc0001bc4b0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x108971e28, 0xc0001967e0}, {0x0, 0x0}, {0xc000088aa8?, 0x0?, 0x1084a23a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x108971e28?, 0xc0001967e0?}, 0xc000088b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x108bd1120?, {0x108971e28?, 0xc0001967e0?}, 0x108672f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x108436c39?, {0x108971e28, 0xc0001967e0}, 0xc00020eb40)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000202570?}, {0x108971e28?, 0xc0001967e0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000212120, {0x108972508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:05 server.go:3413: http: panic serving 127.0.0.1:58146: open app/views/templates/signup.html: no such file or directory
+goroutine 50 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10891fda0?, 0xc0001bc9f0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x108971e28, 0xc0001969a0}, {0x0, 0x0}, {0xc000088aa8?, 0x0?, 0x1084a23a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x108971e28?, 0xc0001969a0?}, 0xc000088b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x108bd1120?, {0x108971e28?, 0xc0001969a0?}, 0x108672f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x108436c39?, {0x108971e28, 0xc0001969a0}, 0xc0000d1e60)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0001bc5d0?}, {0x108971e28?, 0xc0001969a0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000fc6c0, {0x108972508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:06 server.go:3413: http: panic serving 127.0.0.1:58153: open app/views/templates/signup.html: no such file or directory
+goroutine 52 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10891fda0?, 0xc0001bced0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x108971e28, 0xc000196b60}, {0x0, 0x0}, {0xc000088aa8?, 0x0?, 0x1084a23a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x108971e28?, 0xc000196b60?}, 0xc000088b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x108bd1120?, {0x108971e28?, 0xc000196b60?}, 0x108672f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x108436c39?, {0x108971e28, 0xc000196b60}, 0xc0001e2480)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0001bcab0?}, {0x108971e28?, 0xc000196b60?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000fc870, {0x108972508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:14 server.go:3413: http: panic serving 127.0.0.1:58155: open app/views/templates/signup.html: no such file or directory
+goroutine 54 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10891fda0?, 0xc000278690?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x108971e28, 0xc000230d20}, {0x0, 0x0}, {0xc0000e1aa8?, 0x0?, 0x1084a23a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x108971e28?, 0xc000230d20?}, 0xc0000e1b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x108bd1120?, {0x108971e28?, 0xc000230d20?}, 0x108672f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x108436c39?, {0x108971e28, 0xc000230d20}, 0xc0002757a0)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0001bcf90?}, {0x108971e28?, 0xc000230d20?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000fca20, {0x108972508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:14 server.go:3413: http: panic serving 127.0.0.1:58165: open app/views/templates/signup.html: no such file or directory
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10891fda0?, 0xc000278ae0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x108971e28, 0xc000230ee0}, {0x0, 0x0}, {0xc00008eaa8?, 0x0?, 0x1084a23a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x108971e28?, 0xc000230ee0?}, 0xc00008eb30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x108bd1120?, {0x108971e28?, 0xc000230ee0?}, 0x108672f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x108436c39?, {0x108971e28, 0xc000230ee0}, 0xc00020f560)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000202d20?}, {0x108971e28?, 0xc000230ee0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0002123f0, {0x108972508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:14 server.go:3413: http: panic serving 127.0.0.1:58187: open app/views/templates/signup.html: no such file or directory
+goroutine 32 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10891fda0?, 0xc000279020?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x108971e28, 0xc0002310a0}, {0x0, 0x0}, {0xc00008eaa8?, 0x0?, 0x1084a23a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x108971e28?, 0xc0002310a0?}, 0xc00008eb30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x108bd1120?, {0x108971e28?, 0xc0002310a0?}, 0x108672f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x108436c39?, {0x108971e28, 0xc0002310a0}, 0xc000314240)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000278c00?}, {0x108971e28?, 0xc0002310a0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000212c60, {0x108972508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:15 server.go:3413: http: panic serving 127.0.0.1:58198: open app/views/templates/signup.html: no such file or directory
+goroutine 82 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x10891fda0?, 0xc000174930?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x108971e28, 0xc000132b60}, {0x0, 0x0}, {0xc00008daa8?, 0x0?, 0x1084a23a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x108971e28?, 0xc000132b60?}, 0xc00008db30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x108bd1120?, {0x108971e28?, 0xc000132b60?}, 0x108672f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x108436c39?, {0x108971e28, 0xc000132b60}, 0xc000171680)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000174510?}, {0x108971e28?, 0xc000132b60?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000212e10, {0x108972508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:34 server.go:3413: http: panic serving 127.0.0.1:58277: open app/views/templates/signup.html: no such file or directory
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x101188da0?, 0xc0000b23f0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x1011dae28, 0xc0000d2000}, {0x0, 0x0}, {0xc0001d9aa8?, 0x0?, 0x100d0b3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x1011dae28?, 0xc0000d2000?}, 0xc0001d9b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x10143a120?, {0x1011dae28?, 0xc0000d2000?}, 0x100edbf9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c9fc39?, {0x1011dae28, 0xc0000d2000}, 0xc0000b4000)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0001974a0?}, {0x1011dae28?, 0xc0000d2000?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001f8090, {0x1011db508, 0xc0001973b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:34 server.go:3413: http: panic serving 127.0.0.1:58278: open app/views/templates/signup.html: no such file or directory
+goroutine 5 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x101188da0?, 0xc0000b2840?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x1011dae28, 0xc0000d21c0}, {0x0, 0x0}, {0xc00008daa8?, 0x0?, 0x100d0b3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x1011dae28?, 0xc0000d21c0?}, 0xc00008db30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x10143a120?, {0x1011dae28?, 0xc0000d21c0?}, 0x100edbf9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c9fc39?, {0x1011dae28, 0xc0000d21c0}, 0xc000114000)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00010e090?}, {0x1011dae28?, 0xc0000d21c0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000110000, {0x1011db508, 0xc0001973b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:34 server.go:3413: http: panic serving 127.0.0.1:58291: open app/views/templates/signup.html: no such file or directory
+goroutine 36 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x101188da0?, 0xc0000b2d80?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x1011dae28, 0xc0000d2380}, {0x0, 0x0}, {0xc00008daa8?, 0x0?, 0x100d0b3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x1011dae28?, 0xc0000d2380?}, 0xc00008db30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x10143a120?, {0x1011dae28?, 0xc0000d2380?}, 0x100edbf9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c9fc39?, {0x1011dae28, 0xc0000d2380}, 0xc0000b4b40)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000b2960?}, {0x1011dae28?, 0xc0000d2380?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000b81b0, {0x1011db508, 0xc0001973b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:36 server.go:3413: http: panic serving 127.0.0.1:58299: open app/views/templates/signup.html: no such file or directory
+goroutine 38 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x101188da0?, 0xc000197950?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x1011dae28, 0xc0002122a0}, {0x0, 0x0}, {0xc000089aa8?, 0x0?, 0x100d0b3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x1011dae28?, 0xc0002122a0?}, 0xc000089b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x10143a120?, {0x1011dae28?, 0xc0002122a0?}, 0x100edbf9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c9fc39?, {0x1011dae28, 0xc0002122a0}, 0xc0001c6a20)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000197530?}, {0x1011dae28?, 0xc0002122a0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000b8360, {0x1011db508, 0xc0001973b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:41 server.go:3413: http: panic serving 127.0.0.1:58300: open app/views/templates/signup.html: no such file or directory
+goroutine 39 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x101188da0?, 0xc000197da0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x1011dae28, 0xc000212460}, {0x0, 0x0}, {0xc00008daa8?, 0x0?, 0x100d0b3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x1011dae28?, 0xc000212460?}, 0xc00008db30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x10143a120?, {0x1011dae28?, 0xc000212460?}, 0x100edbf9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c9fc39?, {0x1011dae28, 0xc000212460}, 0xc0000b50e0)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000b2ea0?}, {0x1011dae28?, 0xc000212460?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000b83f0, {0x1011db508, 0xc0001973b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:41 server.go:3413: http: panic serving 127.0.0.1:58327: open app/views/templates/signup.html: no such file or directory
+goroutine 40 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x101188da0?, 0xc00024c2a0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x1011dae28, 0xc000212620}, {0x0, 0x0}, {0xc0002b8aa8?, 0x0?, 0x100d0b3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x1011dae28?, 0xc000212620?}, 0xc0002b8b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x10143a120?, {0x1011dae28?, 0xc000212620?}, 0x100edbf9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c9fc39?, {0x1011dae28, 0xc000212620}, 0xc0000b5200)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc0000b2f60?}, {0x1011dae28?, 0xc000212620?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000b8480, {0x1011db508, 0xc0001973b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:34:41 server.go:3413: http: panic serving 127.0.0.1:58329: open app/views/templates/signup.html: no such file or directory
+goroutine 26 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x101188da0?, 0xc00024c780?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x1011dae28, 0xc0002127e0}, {0x0, 0x0}, {0xc0002b8aa8?, 0x0?, 0x100d0b3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x1011dae28?, 0xc0002127e0?}, 0xc0002b8b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x10143a120?, {0x1011dae28?, 0xc0002127e0?}, 0x100edbf9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c9fc39?, {0x1011dae28, 0xc0002127e0}, 0xc0001c78c0)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00024c360?}, {0x1011dae28?, 0xc0002127e0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001f8480, {0x1011db508, 0xc0001973b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:35:11 server.go:3413: http: panic serving 127.0.0.1:58459: open app/views/templates/signup.html: no such file or directory
+goroutine 28 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x101188da0?, 0xc00010ec30?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x1011dae28, 0xc0001202a0}, {0x0, 0x0}, {0xc0002b8aa8?, 0x0?, 0x100d0b3a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x1011dae28?, 0xc0001202a0?}, 0xc0002b8b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x10143a120?, {0x1011dae28?, 0xc0001202a0?}, 0x100edbf9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100c9fc39?, {0x1011dae28, 0xc0001202a0}, 0xc000272000)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc00024c840?}, {0x1011dae28?, 0xc0001202a0?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001f8630, {0x1011db508, 0xc0001973b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
+2024/04/29 10:35:46 server.go:3413: http: panic serving 127.0.0.1:58610: open app/views/templates/signup.html: no such file or directory
+goroutine 9 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:1898 +0xbe
+panic({0x100af2da0?, 0xc0002024b0?})
+	/usr/local/Cellar/go/1.22.2/libexec/src/runtime/panic.go:770 +0x132
+text/template.Must(...)
+	/usr/local/Cellar/go/1.22.2/libexec/src/text/template/helper.go:26
+todo_app/app/controllers.generateHTML({0x100b44e28, 0xc00022e000}, {0x0, 0x0}, {0xc0000e1aa8?, 0x0?, 0x1006753a0?})
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/server.go:15 +0x23a
+todo_app/app/controllers.signup({0x100b44e28?, 0xc00022e000?}, 0xc0000e1b30?)
+	/Users/yuganamba/dev/udemy/golang-webgosql/todo_app/app/controllers/route_auth.go:8 +0x87
+net/http.HandlerFunc.ServeHTTP(0x100da4120?, {0x100b44e28?, 0xc00022e000?}, 0x100845f9a?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0x100609c39?, {0x100b44e28, 0xc00022e000}, 0xc00020e000)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2683 +0x1ad
+net/http.serverHandler.ServeHTTP({0xc000202030?}, {0x100b44e28?, 0xc00022e000?}, 0x6?)
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000fc090, {0x100b45508, 0xc0000b53b0})
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/Cellar/go/1.22.2/libexec/src/net/http/server.go:3285 +0x4b4
